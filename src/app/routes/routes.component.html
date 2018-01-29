@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let pys of reitit">
+        <a href="https://maps.google.fi/maps/place/{{pys.lat}}+{{pys.lon}}">{{pys.name}}</a>
+        <ul>
+            <li *ngFor="let reitti of pys.patterns">
+                {{ reitti.route.shortName }}: {{ reitti.route.longName }}
+            </li>
+        </ul>
+    </li>
+</ul>

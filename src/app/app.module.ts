@@ -1,20 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {TopBarComponent} from './top-bar/top-bar.component';
+import {SetupComponent} from './setup/setup.component';
+import {RoutesComponent} from './routes/routes.component';
+import {DigitransitService} from './services/digitransit.service';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TopBarComponent,
+        SetupComponent,
+        RoutesComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
+    providers: [DigitransitService],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
