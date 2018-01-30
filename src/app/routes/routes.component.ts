@@ -9,6 +9,9 @@ import {DigitransitService} from '../services/digitransit.service';
 export class RoutesComponent implements OnInit {
     reitit: any;
 
+    lat: number = 51.678418;
+    lng: number = 7.809007;
+
     constructor(private digitransit: DigitransitService) {
     }
 
@@ -17,6 +20,12 @@ export class RoutesComponent implements OnInit {
             console.log(response.data['stops']);
             this.reitit = response.data['stops'];
         });
+    }
+
+    setRoute(newlon: number, newlat: number) {
+        console.log(`${newlat}, ${newlon}`);
+        this.lat = newlat;
+        this.lng = newlon;
     }
 
 }
