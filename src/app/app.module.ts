@@ -14,6 +14,9 @@ import {FormsModule} from '@angular/forms';
 import {AgmCoreModule} from '@agm/core';
 import { RouteDirectionPipe } from './pipes/route-direction.pipe';
 import { RouteColorPipe } from './pipes/route-color.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatTabsModule} from '@angular/material';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { RouteColorPipe } from './pipes/route-color.pipe';
         HttpClientModule,
         FormsModule,
         CommonModule,
-        AgmCoreModule.forRoot({apiKey: 'AIzaSyBQpwzaKXT7X_0aWMQnqU3uIZXbRIiNPgk'})
+        AgmCoreModule.forRoot({apiKey: 'AIzaSyBQpwzaKXT7X_0aWMQnqU3uIZXbRIiNPgk'}),
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MatTabsModule
     ],
     providers: [DigitransitService],
     bootstrap: [AppComponent]
