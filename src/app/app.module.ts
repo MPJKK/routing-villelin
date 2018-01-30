@@ -16,7 +16,7 @@ import { RouteDirectionPipe } from './pipes/route-direction.pipe';
 import { RouteColorPipe } from './pipes/route-color.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatTabsModule} from '@angular/material';
 
 
 @NgModule({
@@ -37,7 +37,10 @@ import {MatTabsModule} from '@angular/material';
         AgmCoreModule.forRoot({apiKey: 'AIzaSyBQpwzaKXT7X_0aWMQnqU3uIZXbRIiNPgk'}),
         BrowserAnimationsModule,
         FlexLayoutModule,
-        MatTabsModule
+        MatTabsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule
     ],
     providers: [DigitransitService],
     bootstrap: [AppComponent]

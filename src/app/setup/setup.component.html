@@ -1,3 +1,5 @@
 <h1 class="mat-headline">This is setup</h1>
-<input [ngModel]="busstop" (ngModelChange)="digitransit.busstop = $event">
-<button [routerLink]="['/routes']">Etsi</button>
+<mat-form-field>
+    <input matInput [ngModel]="busstop" (ngModelChange)="digitransit.busstop = $event" placeholder="Laita pysäkki">
+</mat-form-field>
+<button mat-raised-button color="warn" [routerLink]="['/routes']">Etsi</button>
